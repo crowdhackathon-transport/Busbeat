@@ -1,0 +1,69 @@
+<html>
+<head>
+<style>
+img.top {
+    vertical-align: text-top;
+}
+
+img.bottom {
+    vertical-align: text-bottom;
+}
+
+img.middle {
+    vertical-align: text-middle;
+}
+
+.Absolute-Center {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.demo {
+  color: red;
+  text-align: center;
+  font-size: 100%;
+}
+</style>
+
+<script type="text/javascript">
+function loadUrl(newLocation)
+{
+window.location = newLocation;
+return false;
+}
+</script>
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+    <style>
+      body {
+        font-family: 'Tangerine', serif;
+        font-size: 48px;
+      }
+    </style>
+
+</head>
+<body>
+<div id="busbeat"><img class="Absolute-Center" src="busbeat.png" onclick="getLocation()"/><br/><center>Busbeat<br/>just click the heart!</center><center></div>
+<p id="demo" class="demo"></p>
+<p id="myDiv" class="demo"></p>
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    //loadXMLDoc();
+    //url = "http://88.198.100.100:3000/stasis?lon=" + position.coords.longitude + "&lat=" + position.coords.latitude;
+    url = "http://88.198.100.100:3000/stasis?lon=23.714354999999998&lat=37.978157800000005"
+    //url = "http://88.198.100.100:3000/stasis?lon=" + position.coords.longitude + "&lat=" + position.coords.latitude;
+    loadUrl(url);
+}
+</script>
+</body>
+	</html>

@@ -1,0 +1,25 @@
+Hackathon #transport
+
+Task list
+>user start the use of the application
+>>Request the location from geolocation data
+>>>start queyring bustops that are withing radius(predefined)
+
+User now have to give the number (xX | xxx | X-xx)
+
+>Output the route with the data(event & deals{with new name} & secret) 
+Status | OK
+
+>>This is the point of making the user interaction with the app as a motivation user case
+
+
+/**
+
+
+the fun starts...
+
+
+
+
+
+**/
